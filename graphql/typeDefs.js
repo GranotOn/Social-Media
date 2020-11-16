@@ -1,6 +1,9 @@
 const { gql } = require("apollo-server");
 
 module.exports = gql`
+  # This is a comments in GQL
+
+  # Each type specifies the queryable fields of it's type
   type Post {
     id: ID!
     body: String!
@@ -20,6 +23,11 @@ module.exports = gql`
     confirmedPassword: String!
     email: String!
   }
+
+  # Following types are special, because it sepcifies
+  # All the queries a client can execute.
+  # Each query is associated with a type above
+  
   type Query {
     getPosts: [Post]
   }

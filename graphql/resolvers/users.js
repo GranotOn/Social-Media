@@ -55,7 +55,6 @@ module.exports = {
       _,
       { registerInput: { username, email, password, confirmedPassword } }
     ) {
-      // TODO: Validate user data
 
       const { valid, errors } = validateRegisterInput(
         username,
